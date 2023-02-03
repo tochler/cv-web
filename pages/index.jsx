@@ -143,7 +143,7 @@ export default function Home() {
                 <div className="absolute left-0 top-0 right-1/2 bottom-0 bg-orange-800 z-[-1]"></div>
                 <img
                   className="h-full w-full aspect-[16/10] object-cover"
-                  src="assets/3.jpg"
+                  src="assets/wh.jpg"
                 ></img>
               </div>
               <div className="w-full col-span-2 my-auto text-[30px] mr-[450px]">
