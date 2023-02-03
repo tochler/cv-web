@@ -260,7 +260,7 @@ export default function Home() {
                 method="post"
                 autoComplete="off"
               >
-                <div className="flex flex-col w-[90%] px-4 mb-8">
+                <div className="flex flex-col w-[100%] px-4 mb-8">
                   <label
                     for="name"
                     className="text-base font-bold text-[#00FFFF] self-center"
@@ -274,7 +274,7 @@ export default function Home() {
                     name="Nama"
                   />
                 </div>
-                <div className="flex flex-col w-[90%] px-4 mb-8">
+                <div className="flex flex-col w-[100%] px-4 mb-8">
                   <label
                     for="email"
                     className="text-base font-bold text-[#00FFFF] self-center"
@@ -288,7 +288,7 @@ export default function Home() {
                     name="email"
                   />
                 </div>
-                <div className=" flex flex-col w-[90%] px-4 mb-8">
+                <div className=" flex flex-col w-[100%] px-4 mb-8">
                   <label
                     for="massage"
                     className="text-base font-bold text-[#00FFFF] self-center"
