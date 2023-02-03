@@ -1291,6 +1291,10 @@ body {
     width: 90%;
   }
 
+  .hp\:w-\[100\%\] {
+    width: 100%;
+  }
+
   .hp\:flex-col {
     flex-direction: column;
   }

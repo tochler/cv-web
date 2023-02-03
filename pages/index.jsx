@@ -270,7 +270,7 @@ export default function Home() {
                   <input
                     type="text"
                     id="name"
-                    className="w-[70%] hp:w-[90%] bg-slate-200 text-[#008b8b] p-3 rounded-md focus:outline-none self-center"
+                    className="w-[70%] hp:w-[100%] bg-slate-200 text-[#008b8b] p-3 rounded-md focus:outline-none self-center"
                     name="Nama"
                   />
                 </div>
@@ -284,7 +284,7 @@ export default function Home() {
                   <input
                     type="text"
                     id="email"
-                    className="w-[70%] hp:w-[90%] bg-slate-200 text-[#008b8b] p-3 rounded-md focus:outline-none self-center"
+                    className="w-[70%] hp:w-[100%] bg-slate-200 text-[#008b8b] p-3 rounded-md focus:outline-none self-center"
                     name="email"
                   />
                 </div>
@@ -298,7 +298,7 @@ export default function Home() {
                   <textarea
                     type="text"
                     id="pesan"
-                    className="w-[70%] hp:w-[90%] bg-slate-200 text-[#008b8b] p-3 rounded-md focus:outline-none h-32 self-center"
+                    className="w-[70%] hp:w-[100%] bg-slate-200 text-[#008b8b] p-3 rounded-md focus:outline-none h-32 self-center"
                     name="pesan"
                   ></textarea>
                 </div>
