@@ -24,10 +24,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <script
+          defer
           type="module"
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
         ></script>
         <script
+          defer
           nomodule
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
         ></script>
