@@ -73,9 +73,8 @@ export default function Remuse() {
       {/* copyright */}
       <div class="bg-gray-200 text-center lg:text-left flex justify-center items-center">
         <div
-          className="text-gray-700 text-center p-4"
-          className="background-color: rgba(0,
-              0, 0, 0.2);"
+          className="text-gray-700 text-center p-4 background-color: rgba(0,
+            0, 0, 0.2);"
         >
           {" "}
           © 2021 Copyright:

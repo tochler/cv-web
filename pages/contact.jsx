@@ -72,11 +72,7 @@ export default function Contact() {
 
       {/* copyright */}
       <div class="bg-gray-200 text-center lg:text-left flex justify-center items-center">
-        <div
-          className="text-gray-700 text-center p-4"
-          className="background-color: rgba(0,
-                0, 0, 0.2);"
-        >
+        <div className="text-gray-700 text-center p-4">
           {" "}
           © 2021 Copyright:
           <a class="text-gray-800" href="https://tailwind-elements.com/">

@@ -1,0 +1,44 @@
+<div className="ml-[100px] flex flex-col justify-center items-center w-[90%] h-[80vh]">
+            <div className="flex flex-row justify-center w-[100%] h-[250px] gap-[40px]">
+              <div className="w-[50%] h-[100%] text-[25px] mt-[55px] flex flex-col items-end">
+                <p className=" flex font-bold text-[35px] text-[#00FFFF]">
+                  SMP DHARMA WIWEKA
+                </p>
+                <p className="text-white text-right">
+                  Sekolah Menengah Pertama
+                </p>
+                <p className="text-white text-right">2018-2021</p>
+                <p className="text-white text-right">
+                  Jl. Pulau Moyo I No.5, Pedungan, Denpasar Selatan, Kota
+                  Denpasar, Bali 80222
+                </p>
+              </div>
+              <div className="w-[50%] h-[100%] justify-center items-center">
+                <img
+                  className="w-[350px] h-[450px] mx-auto"
+                  src="assets/smp.jpg"
+                ></img>
+              </div>
+            </div>
+          </div>
+          <div className="ml-[100px] flex flex-col justify-center items-center w-[90%] h-[80vh]">
+            <div className="flex flex-row justify-center w-[100%] h-[250px] gap-[40px]">
+              <div className="w-[50%] h-[100%] justify-center items-center">
+                <img
+                  className="w-[350px] h-[450px] mt-[-80px] items-start"
+                  src="assets/smk.jpg"
+                ></img>
+              </div>
+              <div className="w-[50%] h-[100%] text-[30px] mr-[450px] flex flex-col items-start">
+                <p className="flex font-bold text-4xl text-[#00FFFF]">
+                  SMK TI BALI GLOBAL DENPASAR
+                </p>
+                <p className="text-white">Sekolah Menengah Kejuruan</p>
+                <p className="text-white">2021-sekarang</p>
+                <p className="text-white text-left">
+                  Jl. Tukad Citarum No.44, Denpasar Selatan, Kota Denpasar, Bali
+                  80234
+                </p>
+              </div>
+            </div>
+          </div>
