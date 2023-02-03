@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Poppins } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import { useState } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,6 +10,12 @@ const poppins = Poppins({
 });
 
 export default function Home() {
+  let [isNavOpen, setIsNavOpen] = useState(false);
+
+  function handleHamburger(e) {
+    setIsNavOpen(!isNavOpen);
+    console.log(isNavOpen);
+  }
   return (
     <>
       <Head>
@@ -30,48 +37,55 @@ export default function Home() {
         style={poppins.style}
       >
         {/* Navbar */}
-        <nav className="p-5 bg-[#0B142E] shadow flex justify-between items-center">
+        <nav className="p-5 z-[1000] bg-[#0B142E] isolate relative shadow flex justify-between items-center">
           <div>
             <span className="text-2xl text-[#00FFFF] hp:text-base">
               Tochler Suputra
             </span>
           </div>
-          <span className="text-3xl text-[#00FFFF] cursor-pointer mx-2  md:hidden block">
+          <span
+            onClick={handleHamburger}
+            className="text-3xl text-[#00FFFF] cursor-pointer mx-2  md:hidden block"
+          >
             <ion-icon name="menu"></ion-icon>
           </span>
 
-          <ul className="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+          <ul
+            className={`nav__items text-[#00FFFF] hp:text-[#FF1493]  hover:text-cyan-500  hp:z-[-1]  hp:bg-[#0B142E] transition-all duration-500 flex gap-2 hp:w-full hp:absolute left-0 right-0  hp:flex-col px-4 ${
+              isNavOpen ? "hp:top-full hp:opacity-100" : "hp:opacity-0 top-0"
+            }`}
+          >
             {/* Project */}
-            <li className="mx-4 my-6 md:my-0">
+            <li className="mx-4 md:my-0">
               <a
                 href="#about"
-                className="text-xl text-[#00FFFF] hover:text-cyan-500 duration-500"
+                className="text-xl hover:text-white duration-500"
               >
                 ABOUT
               </a>
             </li>
             {/* Line */}
-            <li className="mx-5 my-6 md:my-0 grid place-items-center">
-              <div className="h-7 w-[2px] bg-[#00FFFF]"></div>
+            <li className="mx-5 md:my-0 grid place-items-center">
+              <div className="h-7 w-[2px] hp:hidden bg-[#00FFFF]"></div>
             </li>
             {/* Resume */}
-            <li className="mx-4 my-6 md:my-0">
+            <li className="mx-4 md:my-0">
               <a
                 href="#resume"
-                className="text-xl text-[#00FFFF] hover:text-cyan-500 duration-500"
+                className="text-xl  hover:text-white duration-500"
               >
                 RESUME
               </a>
             </li>
             {/* Line */}
-            <li className="mx-5 my-6 md:my-0 grid place-items-center">
-              <div className="h-7 w-[2px] bg-[#00FFFF]"></div>
+            <li className="mx-5 md:my-0 grid place-items-center">
+              <div className="h-7 w-[2px] hp:hidden bg-[#00FFFF]"></div>
             </li>
             {/* Contact */}
-            <li className="mx-4 my-6 md:my-0">
+            <li className="mx-4 md:my-0">
               <a
                 href="#contact"
-                className="text-xl text-[#00FFFF] hover:text-cyan-500 duration-500"
+                className="text-xl  hover:text-white duration-500"
               >
                 CONTACT
               </a>
@@ -90,7 +104,7 @@ export default function Home() {
                   src="assets/seklh2.jpg"
                 ></img>
               </div>
-              <div className="w-[50%] hp:w-full p-4 h-[100%] pl-9 pt-7">
+              <div className="w-[50%] hp:w-full flex flex-col justify-center p-4 h-[100%] pl-9 pt-7">
                 <p className="text-[45px] hp:text-3xl text-white font-bold">
                   Tochler Suputra
                 </p>
@@ -114,7 +128,11 @@ export default function Home() {
         </div>
 
         {/* Resume */}
+
         <div id="resume" className="ml-[0px] mt-20">
+          <p className="border-b-4 border-pink-600 text-3xl w-min mx-auto font-bold mb-10">
+            RESUME
+          </p>
           <div className="container relative isolate w-[85%] mx-auto justify-center flex flex-col min-h-screen items-center gap-6">
             <div className="line__down hp:hidden absolute left-1/2 top-0 z-[-1] -translate-x-full h-full w-2 bg-slate-400"></div>
 
@@ -130,9 +148,11 @@ export default function Home() {
                 <p className=" flex font-bold text-4xl text-black">
                   SDN 2 SERANGAN
                 </p>
-                <p className="text-black hp:text-2xl">Sekolah Dasar Negri</p>
-                <p className="text-black hp:text-2xl">2012-2018</p>
-                <p className=" flex items-center text-black text-left hp:text-xl">
+                <p className="text-black hp:text-2xl text-2xl">
+                  Sekolah Dasar Negri
+                </p>
+                <p className="text-black hp:text-2xl text-2xl">2012-2018</p>
+                <p className=" flex items-center text-black text-left hp:text-xl text-xl">
                   Jl. Tukad Semanik, Serangan, Denpasar Selatan, Kota Denpasar,
                   Bali 80229
                 </p>
@@ -142,13 +162,15 @@ export default function Home() {
             <div className="w-full grid grid-cols-5 hp:flex hp:flex-col-reverse mx-auto grid-rows-1 gap-6">
               <div className="w-full col-span-2 my-auto text-[30px] mr-[450px]">
                 <p className=" flex font-bold text-4xl text-black">
-                  SDN 2 SERANGAN
+                  SMP DHARMA WIWEKA
                 </p>
-                <p className="text-black hp:text-2xl">Sekolah Dasar Negri</p>
-                <p className="text-black hp:text-2xl">2012-2018</p>
-                <p className=" flex items-center text-black text-left hp:text-xl">
-                  base Jl. Tukad Semanik, Serangan, Denpasar Selatan, Kota
-                  Denpasar, Bali 80229
+                <p className="text-black hp:text-2xl text-2xl">
+                  Sekolah Menengah Pertama
+                </p>
+                <p className="text-black hp:text-2xl text-2xl">2018-2021</p>
+                <p className=" flex items-center text-black text-left hp:text-xl text-xl">
+                  Jl. Pulau Moyo I No.5, Pedungan, Denpasar Selatan, Kota
+                  Denpasar, Bali 80222
                 </p>
               </div>
               <div className="w-full p-16 col-span-3 relative isolate h-[100%] flex items-center">
@@ -169,13 +191,15 @@ export default function Home() {
               </div>
               <div className="w-full col-span-2 my-auto text-[30px] mr-[450px]">
                 <p className=" flex font-bold text-4xl text-black">
-                  SDN 2 SERANGAN
+                  SMK TI BALI GLOBAL
                 </p>
-                <p className="text-black hp:text-2xl">Sekolah Dasar Negri</p>
-                <p className="text-black hp:text-2xl">2012-2018</p>
-                <p className=" flex items-center text-black text-left hp:text-xl">
-                  Jl. Tukad Semanik, Serangan, Denpasar Selatan, Kota Denpasar,
-                  Bali 80229
+                <p className="text-black hp:text-2xl text-2xl">
+                  Sekolah Menengah Kejuruan
+                </p>
+                <p className="text-black hp:text-2xl text-2xl">2021-Sekarang</p>
+                <p className=" flex items-center text-black text-left hp:text-xl text-xl">
+                  Jl. Tukad Citarum No.44, Dauh Puri Klod, Denpasar Selatan,
+                  Kota Denpasar, Bali 80234
                 </p>
               </div>
             </div>
