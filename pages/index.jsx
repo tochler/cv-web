@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Poppins } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
+import useAnimateSlide from "@/lib/useAnimateSlide";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,6 +12,7 @@ const poppins = Poppins({
 
 export default function Home() {
   let [isNavOpen, setIsNavOpen] = useState(false);
+  useAnimateSlide();
 
   function handleHamburger(e) {
     setIsNavOpen(!isNavOpen);
@@ -98,7 +100,7 @@ export default function Home() {
 
         {/* about */}
         <div id="about" className="relative">
-          <div className="flex justify-center">
+          <div data-slide="right" className="flex justify-center">
             <div className="hp:flex-col flex flex-row w-[70%] mt-10 bg-[#0B142E]">
               <div>
                 <img
@@ -106,7 +108,10 @@ export default function Home() {
                   src="assets/seklh2.jpg"
                 ></img>
               </div>
-              <div className="w-[50%] hp:w-full flex flex-col justify-center p-4 h-[100%] pl-9 pt-7">
+              <div
+                data-slide="right"
+                className="w-[50%] hp:w-full flex flex-col justify-center p-4 h-[100%] pl-9 pt-7"
+              >
                 <p className="text-[45px] hp:text-3xl text-white font-bold">
                   Tochler Suputra
                 </p>
@@ -138,7 +143,10 @@ export default function Home() {
           <div className="container relative isolate w-[85%] mx-auto justify-center flex flex-col min-h-screen items-center gap-6">
             <div className="line__down hp:hidden absolute left-1/2 top-0 z-[-1] -translate-x-full h-full w-2 bg-slate-400"></div>
 
-            <div className="w-full grid grid-cols-5 hp:flex hp:flex-col mx-auto grid-rows-1 gap-6">
+            <div
+              data-slide="right"
+              className="w-full grid grid-cols-5 hp:flex hp:flex-col mx-auto grid-rows-1 gap-6"
+            >
               <div className="w-full p-16 col-span-3 relative isolate h-[100%] flex items-center">
                 <div className="absolute left-0 top-0 right-1/2 bottom-0 bg-orange-800 z-[-1]"></div>
                 <img
@@ -146,7 +154,10 @@ export default function Home() {
                   src="assets/Wh.jpg"
                 ></img>
               </div>
-              <div className="w-full col-span-2 my-auto text-[30px] mr-[450px]">
+              <div
+                data-slide="right"
+                className="w-full col-span-2 my-auto text-[30px] mr-[450px]"
+              >
                 <p className=" flex font-bold text-4xl text-black">
                   SDN 2 SERANGAN
                 </p>
@@ -161,8 +172,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full grid grid-cols-5 hp:flex hp:flex-col-reverse mx-auto grid-rows-1 gap-6">
-              <div className="w-full col-span-2 my-auto text-[30px] mr-[450px]">
+            <div
+              data-slide="left"
+              className="w-full grid grid-cols-5 hp:flex hp:flex-col-reverse mx-auto grid-rows-1 gap-6"
+            >
+              <div
+                data-slide="left"
+                className="w-full col-span-2 my-auto text-[30px] mr-[450px]"
+              >
                 <p className=" flex font-bold text-4xl text-black">
                   SMP DHARMA WIWEKA
                 </p>
@@ -183,7 +200,11 @@ export default function Home() {
                 ></img>
               </div>
             </div>
-            <div className="w-full grid grid-cols-5 hp:flex hp:flex-col mx-auto grid-rows-1 gap-6">
+
+            <div
+              data-slide="right"
+              className="w-full grid grid-cols-5 hp:flex hp:flex-col mx-auto grid-rows-1 gap-6"
+            >
               <div className="w-full p-16 col-span-3 relative isolate h-[100%] flex items-center">
                 <div className="absolute left-0 top-0 right-1/2 bottom-0 bg-neutral-800 z-[-1]"></div>
                 <img
@@ -191,7 +212,10 @@ export default function Home() {
                   src="assets/gedung.jpg"
                 ></img>
               </div>
-              <div className="w-full col-span-2 my-auto text-[30px] mr-[450px]">
+              <div
+                data-slide="right"
+                className="w-full col-span-2 my-auto text-[30px] mr-[450px]"
+              >
                 <p className=" flex font-bold text-4xl text-black">
                   SMK TI BALI GLOBAL
                 </p>
@@ -228,16 +252,28 @@ export default function Home() {
             <div className="flex justify-center hp:flex-col items-center ">
               <div className="w-1/2 hp:w-full px-4">
                 <div className="mx-auto text-center mb-16">
-                  <h4 className="font-semibold text-lg text-white mb-2 ">
+                  <h4
+                    data-slide="right"
+                    className="font-semibold text-lg text-white mb-2 "
+                  >
                     Contact
                   </h4>
-                  <h2 className="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                  <h2
+                    data-slide="right"
+                    className="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl"
+                  >
                     Call Me
                   </h2>
-                  <p className="font-medium text-md text-white md:text-lg">
+                  <p
+                    data-slide="right"
+                    className="font-medium text-md text-white md:text-lg"
+                  >
                     you can contact me via the form that I have provided
                   </p>
-                  <div className="flex justify-center items-center gap-4 text-white text-[30px]">
+                  <div
+                    data-slide="right"
+                    className="flex justify-center items-center gap-4 text-white text-[30px]"
+                  >
                     <a href="https://www.instagram.com/invites/contact/?i=ogfm8wqi7mtg&utm_content=nmrmqby">
                       <ion-icon
                         name="logo-instagram"
@@ -255,6 +291,7 @@ export default function Home() {
               </div>
 
               <form
+                data-slide="left"
                 className="flex w-1/2 hp:w-full flex-col items-center"
                 action="https://formsubmit.co/bapakmugantengx@gmail.com"
                 method="post"
