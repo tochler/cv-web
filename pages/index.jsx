@@ -119,15 +119,14 @@ export default function Home() {
                   PROJECT CV
                 </p>
                 <p className="text-white mt-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam illo quia facilis cumque perspiciatis, ducimus
-                  praesentium reprehenderit dolores vitae voluptatibus alias,
-                  magni impedit, autem architecto illum voluptates omnis
-                  repudiandae ipsum. Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Doloribus libero optio deserunt voluptatem
-                  sit cumque tempora, omnis nobis facere inventore doloremque
-                  blanditiis nam velit, aut temporibus, nemo labore! Cum,
-                  dignissimos.
+                  Hi, I'm Wayan Tochler Bagus Suputra. a student from SMK TI
+                  Bali Global Denpasar who is interested in the world of
+                  programmers. Have made several website projects provided by
+                  the school
+                </p>
+                <p className="text-white mt-5">
+                  Now I'm doing my internship at Taksu Tech and I hope I can
+                  get more projects
                 </p>
               </div>
             </div>
