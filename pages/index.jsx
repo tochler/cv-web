@@ -216,7 +216,7 @@ export default function Home() {
                 className="w-full col-span-2 my-auto text-[30px] mr-[450px]"
               >
                 <p className=" flex font-bold text-4xl text-black">
-                  SMK TI BALI GLOBAL
+                  SMK TI BALI GLOBAL DENPASAR
                 </p>
                 <p className="text-black hp:text-2xl text-2xl">
                   Sekolah Menengah Kejuruan
