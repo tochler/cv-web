@@ -119,13 +119,13 @@ export default function Home() {
                   PROJECT CV
                 </p>
                 <p className="text-white mt-5">
-                  Hi, I'm Wayan Tochler Bagus Suputra. a student from SMK TI
+                  Hi, I&apos;m Wayan Tochler Bagus Suputra. a student from SMK TI
                   Bali Global Denpasar who is interested in the world of
                   programmers. Have made several website projects provided by
                   the school
                 </p>
                 <p className="text-white mt-5">
-                  Now I'm doing my internship at Taksu Tech and I hope I can
+                  Now I&apos;m doing my internship at Taksu Tech and I hope I can
                   get more projects
                 </p>
               </div>
